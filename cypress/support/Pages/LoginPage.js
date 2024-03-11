@@ -1,13 +1,13 @@
 export class LoginPage {
 
 
-    Login(){
+    Login(User,Pass){
         cy.request(
             'POST',
             'https://pushing-it.onrender.com/api/login',
             {
-            username: 'pushingit',
-            password:'123456!'
+            username: "pushingit",
+            password: "123456!"
             }).then((response) => {
                 expect(response.status).to.equal(201)
                 window.localStorage.setItem('token',response.body.token)
@@ -18,8 +18,3 @@ export class LoginPage {
 };
 
 
- /*cy.visit('');
-       cy.get('[data-cy="registertoggle"]').dblclick();
-       cy.get('[data-cy="user"]').type('pushingit');
-       cy.get('[data-cy="pass"]').type('123456!');
-       cy.get('[data-cy="submitForm"]').click();*/
