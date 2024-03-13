@@ -10,4 +10,7 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     fixturesFolder: 'cypress/e2e/',
   },
+  env: {
+  user: "pushingit",
+  pass:"123456!"}
 })

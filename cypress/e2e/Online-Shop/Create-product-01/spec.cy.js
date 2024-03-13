@@ -17,7 +17,7 @@ describe(` ${module} - ${scenarioName}`, () => {
 
 
     beforeEach('',()=>{
-        loginPage.Login();
+        loginPage.Login(Cypress.env().user, Cypress.env().pass);
     })
 
     it(`User creates a Product and then deletes it - TestCaseId:${testCaseId}`, () => {
